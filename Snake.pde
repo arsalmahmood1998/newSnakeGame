@@ -62,13 +62,13 @@ class Snake {
     }
   }
   void increaseLength(float newLength) {
-    PVector lastpoint=points.get(points.size()-1);
-    PVector secondLastpoint=points.get(points.size()-2);
+    PVector lastPoint=points.get(points.size()-1);
+    PVector secondLastPoint=points.get(points.size()-2);
     float finalLength=newLength;
-    PVector tailDirection= PVector.sub(lastpoint, secondLastpoint);
+    PVector tailDirection= PVector.sub(lastPoint, secondLastPoint);
     for (int i=0; i<finalLength; i++) {
-      lastpoint=points.get(points.size()-1);
-      PVector newPoint = PVector.add(lastpoint, tailDirection);
+      lastPoint=points.get(points.size()-1);
+      PVector newPoint =PVector.add(lastPoint,tailDirection);
       points.add(newPoint);
     }
   }
