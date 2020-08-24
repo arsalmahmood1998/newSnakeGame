@@ -59,8 +59,7 @@ class Manager {
       boolean isCollidingWithSnake= collissionTest(snake.points, myFood, foodRadius*2);
       if (!isCollidingWithSnake && !isCollidingWithOldFood) {
         foods.add(myFood);
-      } 
-      else {
+      } else {
         i--;
       }
     }

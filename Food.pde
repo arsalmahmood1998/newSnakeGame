@@ -3,7 +3,7 @@ class Food extends PVector {
   color foodColor=color(random(255), random(255), random(255));
   Food( float _radius) {
     super(random(_radius, width-_radius), random(_radius+40, height-_radius));
-   
+
     radius=_radius;
   }
   void display() {

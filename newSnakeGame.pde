@@ -4,7 +4,7 @@ void setup() {
   gameManager=new Manager();
 }
 void draw() {
-  background(0,255,255);
+  background(0, 255, 255);
   gameManager.displayGame();
   gameManager.moveGame();
 }

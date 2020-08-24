@@ -43,14 +43,11 @@ class Snake {
     }
     if (points.get(0).x<0) {
       points.get(0).x=width;
-    }
-    else if (points.get(0).x>width) {
+    } else if (points.get(0).x>width) {
       points.get(0).x=0;
-    }
-    else if (points.get(0).y<0) {
+    } else if (points.get(0).y<0) {
       points.get(0).y=height;
-    }
-    else if (points.get(0).y>height) {
+    } else if (points.get(0).y>height) {
       points.get(0).y=0;
     }
   }
