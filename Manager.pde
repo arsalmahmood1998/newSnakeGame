@@ -51,7 +51,7 @@ class Manager {
     snake.updateDirection(newDirection);
   }
   void addFood() {
-    int foodsCount=10;
+    int foodsCount=3;
     foods.add(new Food(foodRadius));
     for (int i=0; i<foodsCount-1; i++) {
       Food myFood=new Food(foodRadius);
@@ -70,7 +70,7 @@ class Manager {
       if (collissionTest(foods.get(i), snake.points.get(0), foodRadius)) {
         foods.remove(foods.get(i));
         score+=2;
-        snake.increaseLength(score*2.5);
+        snake.increaseLength(score*2);
         println(snake.points.size());
       }
     }

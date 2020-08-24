@@ -12,7 +12,7 @@ class Snake {
     pointsCount=_pointsCount;
     create();
   }
-    void disPlay() {
+  void disPlay() {
     for ( PVector point : points) {
       pushStyle();
       stroke(255, 0, 0);
@@ -21,10 +21,10 @@ class Snake {
       popStyle();
     }
     pushStyle();
-    fill(255,0,0);
+    fill(255, 0, 0);
     textSize(40);
-    textAlign(CENTER,CENTER);
-    text("Snake",250,20);
+    textAlign(CENTER, CENTER);
+    text("Snake", 250, 20);
   }
   void create() {
     points.add(new PVector(headX, headY));
@@ -43,11 +43,14 @@ class Snake {
     }
     if (points.get(0).x<0) {
       points.get(0).x=width;
-    } else if (points.get(0).x>width) {
+    }
+    else if (points.get(0).x>width) {
       points.get(0).x=0;
-    } else if (points.get(0).y<0) {
+    }
+    else if (points.get(0).y<0) {
       points.get(0).y=height;
-    } else if (points.get(0).y>height) {
+    }
+    else if (points.get(0).y>height) {
       points.get(0).y=0;
     }
   }
@@ -68,7 +71,7 @@ class Snake {
     PVector tailDirection= PVector.sub(lastPoint, secondLastPoint);
     for (int i=0; i<finalLength; i++) {
       lastPoint=points.get(points.size()-1);
-      PVector newPoint =PVector.add(lastPoint,tailDirection);
+      PVector newPoint =PVector.add(lastPoint, tailDirection);
       points.add(newPoint);
     }
   }
